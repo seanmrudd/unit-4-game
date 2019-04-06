@@ -5,6 +5,7 @@
 img {
     width: 200px;
     height: 200px;
+    margin: 5px;
 }
 
 body {
@@ -18,30 +19,26 @@ header {
 
 .directions {
     background-color: rgb(251,230,207);
-    max-width: 800px;
     color: green;
     font-size: 18px;
 }
 
 .random-number-box {
     background-color: rgb(83,201,133);
-    min-width: 300px;
-    min-height: 200px;
     font-size: 30px;
 }
 
 .win-loss-box {
     background-color: lightblue;
-    min-height: 200px;
-    min-width: 100px;
+    font-size: 30px;
 }
 
 #win {
-    padding-bottom: 20px;
+
 }
 
 #loss {
-   padding-top: 20px;
+
 }
 
 .crystal-box {
