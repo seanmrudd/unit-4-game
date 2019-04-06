@@ -10,11 +10,11 @@ $(document).ready(function () {
   $('#random-number').text(randomNumber)
 
 
-  var w = Math.floor(Math.random() * (12)) + 1;
-  var x = Math.floor(Math.random() * (12)) + 1;
-  var y = Math.floor(Math.random() * (12)) + 1;
-  var z = Math.floor(Math.random() * (12)) + 1;
-  var numberOptions = [w, x, y, z];
+  w = Math.floor(Math.random() * (12)) + 1;
+  x = Math.floor(Math.random() * (12)) + 1;
+  y = Math.floor(Math.random() * (12)) + 1;
+  z = Math.floor(Math.random() * (12)) + 1;
+  numberOptions = [w, x, y, z];
   console.log(numberOptions)
 
 
@@ -26,6 +26,8 @@ $(document).ready(function () {
 
     imageCrystal.addClass("crystal-image");
 
+    imageCrystal.attr('id', 'crystal'+i);
+
     imageCrystal.attr("src", images[i]);
 
     imageCrystal.attr("data-crystalvalue", numberOptions[i]);
@@ -33,7 +35,6 @@ $(document).ready(function () {
     $('.crystals-box').append(imageCrystal);
 
   }
-
 
 
   function restart() {
@@ -52,32 +53,32 @@ $(document).ready(function () {
     console.log(numberOptions);
 
     for (var i = 0; i < images.length; i++) {
-      imageCrystal.attr("data-crystalvalue", numberOptions[i]);
-      console.log(numberOptions[i])
+      
+        $('#crystal'+i).attr("data-crystalvalue", numberOptions[i]);
+        console.log(numberOptions[i])
     }
   }
 
+    $(".crystal-image").on("click", function () {
 
-  $(".crystal-image").on("click", function () {
+      crystalValue = ($(this).attr("data-crystalvalue"));
+      console.log(this)
+      crystalValue = parseInt(crystalValue);
 
-    crystalValue = ($(this).attr("data-crystalvalue"));
-    console.log(this)
-    crystalValue = parseInt(crystalValue);
+      totalScore += crystalValue;
 
-    totalScore += crystalValue;
+      if (totalScore === randomNumber) {
+        win++;
+        restart();
+        console.log('win: ' + win)
+      } else if (totalScore >= randomNumber) {
+        ++loss;
+        restart();
+        console.log('loss: ' + loss)
+      }
 
-    if (totalScore === randomNumber) {
-      win++;
-      restart();
-      console.log('win: ' + win)
-    } else if (totalScore >= randomNumber) {
-      ++loss;
-      restart();
-      console.log('loss: ' + loss)
-    }
-
-    $('#total-score').text(totalScore)
-    $('#win').text(win)
-    $('#loss').text(loss)
-  });
-})
+      $('#total-score').text(totalScore)
+      $('#win').text(win)
+      $('#loss').text(loss)
+    });
+  })
