@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,27 +12,24 @@
 
 
 <body>
-    <div class='row'>
     <header>
-        <div class='col-12'>
         <h1>Crystal Collector!</h1>
-        </div>
     </header>
     </div>
 
     <main>
 
-        <div class='row'>
-        <div class='col'>
         <div class='directions'>
             <p>
                 You will be given a random number at the start of the game.
             </p>
             <p>
-                There are four crystals below.  By clicking on a crystal you will add a specific amount of points to your total score.
+                There are four crystals below. By clicking on a crystal you will add a specific amount of points
+                to your total score.
             </p>
             <p>
-                You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.
+                You win the game by matching your total score to random number, you lose the game if your total
+                score goes above the random number.
             </p>
             <p>
                 The value of each crystal is hidden from you until you click on it.
@@ -41,22 +39,18 @@
             </p>
         </div>
 
-        <div class='random-win-loss'>
+        <div class='box'>
             <div class='random-number-box'>
                 <span id='random-number'></span>
             </div>
+            
             <div class='win-loss-box'>
-                Wins:<span id='win'>0</span> <br/>
+                Wins:<span id='win'>0</span> <br />
                 Losses:<span id='loss'>0</span>
             </div>
         </div>
 
-        <div class='crystals-box'>
-            <!-- <img class='crystal' id='ruby' src='assets/images/ruby.jpg'>
-            <img class='crystal' id='sapphire' src='assets/images/sapphire.jpg'>
-            <img class='crystal' id='amber' src='assets/images/amber.jpg'>
-            <img class='crystal' id='emerald' src='assets/images/emerald.jpg'> -->
-        </div>
+        <div class='crystals-box'></div>
 
         <div class='scorebox'>
             <p>Your total score</p>
@@ -65,8 +59,10 @@
 
     </main>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="assets/javaScript/game2.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="assets/javaScript/game.js"></script>
 
 </body>
+
 </html>

@@ -15,37 +15,51 @@ body {
 header {
     font-size: 30px;
     background-color: rgb(245, 175, 46);
+    margin: 5px 5px 5px 0;
+    width: fit-content;
 }
 
 .directions {
     background-color: rgb(251,230,207);
     color: green;
     font-size: 18px;
+    margin: 5px 5px 5px 0;
+    width: fit-content;
+    line-height: 30px;
+}
+
+.box {
+    display: flex;
 }
 
 .random-number-box {
     background-color: rgb(83,201,133);
     font-size: 30px;
+    margin: 5px 5px 5px 0;
+    width: 200px;
+    height: 200px;
+    float: left;
 }
 
 .win-loss-box {
+    clear: both;
     background-color: lightblue;
     font-size: 30px;
-}
-
-#win {
-
-}
-
-#loss {
-
+    margin: 5px 5px 5px 0;
+    width: 200px;
+    height: 200px;
 }
 
 .crystal-box {
+    clear: both;
+    margin: 5px 5px 5px 0;
+
 }
 
 .scorebox {
     background-color: rgb(32,162,149);
     color: white;
     font-size: 30px;
+    margin: 5px 5px 5px 0;
+    width: fit-content;
 }
